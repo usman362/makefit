@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-lg-12 col-sm-12">
 
-                <div class="iq-accordion iq-accordion-square">
+                <div clatoss="iq-accordion iq-accordion-square">
 
                     <div class="iq-accordion-block iq-active 1">
                         <div class="iq-accordion-title">

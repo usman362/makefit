@@ -53,9 +53,9 @@
                                                 <i class="ri-search-line"></i>
                                             </a>
                                             <div class="search-box iq-search-bar">
-                                                <form action="#" class="searchbox">
+                                                <form action="{{URL::to('search-result')}}" method="Get" class="searchbox">
                                                     <div class="form-group position-relative">
-                                                        <input type="text" class="text search-input font-size-12" placeholder="type here to search...">
+                                                        <input type="text" class="text search-input font-size-12" name="search" placeholder="type here to search...">
                                                         <i class="search-link ri-search-line"></i>
                                                     </div>
                                                 </form>
@@ -75,7 +75,7 @@
                                                     <div class="iq-card-body">
                                                         <a href="#" class="iq-sub-card">
                                                             <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-1.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                                <img src="{{asset('images/notify/thumb-1.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                                 <div class="media-body">
                                                                     <h6 class="mb-0 ">Boop Bitty</h6>
                                                                     <small class="font-size-12"> just now</small>
@@ -84,7 +84,7 @@
                                                         </a>
                                                         <a href="#" class="iq-sub-card">
                                                             <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-2.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                                <img src="{{asset('images/notify/thumb-2.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                                 <div class="media-body">
                                                                     <h6 class="mb-0 ">The Last Breath</h6>
                                                                     <small class="font-size-12">15 minutes ago</small>
@@ -93,7 +93,7 @@
                                                         </a>
                                                         <a href="#" class="iq-sub-card">
                                                             <div class="media align-items-center">
-                                                                <img src="images/notify/thumb-3.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                                <img src="{{asset('images/notify/thumb-3.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                                 <div class="media-body">
                                                                     <h6 class="mb-0 ">The Hero Camp</h6>
                                                                     <small class="font-size-12">1 hour ago</small>
@@ -106,7 +106,7 @@
                                         </li>
                                         <li>
                                             <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
-                                                <img src="{{asset('/images/user/user.jpg')}}" class="img-fluid avatar-40 rounded-circle" alt="user">
+                                                <img src="{{Auth::User()->profile_img != null ? asset('/images/User_profile/'.Auth::User()->profile_img) : asset('/images/user/user.jpg')}}" class="img-fluid avatar-40 rounded-circle" alt="user">
                                             </a>
                                             <div class="iq-sub-dropdown iq-user-dropdown">
                                                 <div class="iq-card shadow-none m-0">
@@ -121,7 +121,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                        <a href="/setting" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
                                                                     <i class="ri-settings-4-line text-primary"></i>
@@ -131,7 +131,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                        <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                        <a href="/pricing-plan" class="iq-sub-card setting-dropdown">
                                                             <div class="media align-items-center">
                                                                 <div class="right-icon">
                                                                     <i class="ri-settings-4-line text-primary"></i>
@@ -170,9 +170,9 @@
                                         <i class="ri-search-line"></i>
                                     </a>
                                     <div class="search-box iq-search-bar d-search">
-                                        <form action="#" class="searchbox">
+                                        <form action="{{URL::to('search-result')}}" method="Get" class="searchbox">
                                             <div class="form-group position-relative">
-                                                <input type="text" class="text search-input font-size-12" placeholder="type here to search...">
+                                                <input type="text" class="text search-input font-size-12" name="search" placeholder="type here to search...">
                                                 <i class="search-link ri-search-line"></i>
                                             </div>
                                         </form>
@@ -192,7 +192,7 @@
                                             <div class="iq-card-body">
                                                 <a href="#" class="iq-sub-card">
                                                     <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-1.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                        <img src="{{asset('images/notify/thumb-1.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                         <div class="media-body">
                                                             <h6 class="mb-0 ">Boot Bitty</h6>
                                                             <small class="font-size-12"> just now</small>
@@ -201,7 +201,7 @@
                                                 </a>
                                                 <a href="#" class="iq-sub-card">
                                                     <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-2.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                        <img src="{{asset('images/notify/thumb-2.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                         <div class="media-body">
                                                             <h6 class="mb-0 ">The Last Breath</h6>
                                                             <small class="font-size-12">15 minutes ago</small>
@@ -210,7 +210,7 @@
                                                 </a>
                                                 <a href="#" class="iq-sub-card">
                                                     <div class="media align-items-center">
-                                                        <img src="images/notify/thumb-3.jpg" class="img-fluid mr-3" alt="streamit" />
+                                                        <img src="{{asset('images/notify/thumb-3.jpg')}}" class="img-fluid mr-3" alt="streamit" />
                                                         <div class="media-body">
                                                             <h6 class="mb-0 ">The Hero Camp</h6>
                                                             <small class="font-size-12">1 hour ago</small>
@@ -223,14 +223,12 @@
                                 </li>
                                 <li class="nav-item nav-icon">
                                     <a href="#" class="iq-user-dropdown search-toggle p-0 d-flex align-items-center" data-toggle="search-toggle">
-                                        <img src="images/user/user.jpg" class="img-fluid avatar-40 rounded-circle" alt="user">
+                                        <img src="{{Auth::User()->profile_img != null ? asset('/images/User_profile/'.Auth::User()->profile_img) : asset('/images/user/user.jpg')}}" class="img-fluid avatar-40 rounded-circle" alt="user">
                                     </a>
                                     <div class="iq-sub-dropdown iq-user-dropdown">
                                         <div class="iq-card shadow-none m-0">
                                             <div class="iq-card-body p-0 pl-3 pr-3">
-                                                @if (Auth::User()->role == '3')
-                                                    
-                                                @else
+                                                @if (Auth::User()->role != '3')
                                                
                                                 <a href="/index" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
@@ -253,7 +251,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="setting.html" class="iq-sub-card setting-dropdown">
+                                                <a href="/setting" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-settings-4-line text-primary"></i>
@@ -263,7 +261,7 @@
                                                         </div>
                                                     </div>
                                                 </a>
-                                                <a href="pricing-plan.html" class="iq-sub-card setting-dropdown">
+                                                <a href="/pricing-plan" class="iq-sub-card setting-dropdown">
                                                     <div class="media align-items-center">
                                                         <div class="right-icon">
                                                             <i class="ri-settings-4-line text-primary"></i>

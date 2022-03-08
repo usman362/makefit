@@ -5,12 +5,14 @@
     <div class="container">
         <h4 class="main-title mb-4">Account Setting</h4>
         <div class="row">
+            <form action="{{URL::to('/setting-update')}}" method="post" enctype="multipart/form-data" id="update-profile">@csrf
             <div class="col-lg-4 mb-3">
                 <div class="sign-user_card text-center">
                     <img src="{{Auth::User()->profile_img != null ? asset('images/User_profile/'.Auth::User()->profile_img) : asset('images/user/user.jpg')}}" class="rounded-circle img-fluid d-block mx-auto mb-3" alt="user">
-                    <h4 class="mb-3">{{Auth::User()->name}}</h4>
+                    <input type="file" name="profile_img">
+                   <input type="text" name="name" value="{{Auth::User()->name}}">
                    
-                    <a href="/setting-edit" class="edit-icon text-primary">Edit</a>
+                  
                 </div>
             </div>
             <div class="col-lg-8">
@@ -19,7 +21,7 @@
                     <div class="row align-items-center justify-content-between mb-3">
                         <div class="col-md-8">
                             <span class="text-light font-size-13">Email</span>
-                            <p class="mb-0">{{Auth::User()->email}}</p>
+                            <p class="mb-0"><input type="email" name="email" value="{{Auth::User()->email}}"></p>
                         </div>
                         <div class="col-md-4 text-md-right text-left">
                             
@@ -28,7 +30,7 @@
                     <div class="row align-items-center justify-content-between mb-3">
                         <div class="col-md-8">
                             <span class="text-light font-size-13">Password</span>
-                            <p class="mb-0">**********</p>
+                            <p class="mb-0"><input type="password" name="password" > </p>
                         </div>
                         <div class="col-md-4 text-md-right text-left">
                             
@@ -37,7 +39,7 @@
                     <div class="row align-items-center justify-content-between mb-3">
                         <div class="col-md-8">
                             <span class="text-light font-size-13">Date of Birth</span>
-                            <p class="mb-0">{{Auth::User()->dob}}</p>
+                            <p class="mb-0"><input type="text" name="dob" value="{{Auth::User()->dob}}"></p>
                         </div>
                         <div class="col-md-4 text-md-right text-left">
                             
@@ -46,34 +48,17 @@
                     <div class="row align-items-center justify-content-between">
                         <div class="col-md-8">
                             <span class="text-light font-size-13">Language</span>
-                            <p class="mb-0">{{Auth::User()->lang}}</p>
+                            <p class="mb-0"><input type="text" name="lang" value="{{Auth::User()->lang}}"></p>
                         </div>
                         <div class="col-md-4 text-md-right text-left">
                             
                         </div>
                     </div>
-                    <h5 class="mb-3 mt-4 pb-3 a-border">Billing Details</h5>
-                    <div class="row justify-content-between mb-3">
-                        <div class="col-md-8 r-mb-15">
-                            <p>Your next billing date is 19 September 2020.</p>
-                            <a href="#" class="btn btn-hover">Cancel Membership</a>
-                        </div>
-                        <div class="col-md-4 text-md-right text-left">
-                            <a href="#" class="text-primary">Update Payment info</a>
-                        </div>
-                    </div>
-                    <h5 class="mb-3 mt-4 pb-3 a-border">Plan Details</h5>
-                    <div class="row justify-content-between mb-3">
-                        <div class="col-md-8">
-                            <p>Premium</p>
-                        </div>
-                        <div class="col-md-4 text-md-right text-left">
-                            <a href="pricing-plan.html" class="text-primary">Change Plan</a>
-                        </div>
-                    </div>
-                   
+                 
                 </div>
+                <a href="#" class="btn mt-2 btn-hover" onclick="document.getElementById('update-profile').submit()">Update Profile</a>
             </div>
+        </form>
         </div>
     </div>
 </section>

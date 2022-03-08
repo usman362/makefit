@@ -8,18 +8,14 @@
                     <div class="widget text-left">
                         <div class="menu-footer-link-1-container">
                             <ul id="menu-footer-link-1" class="menu p-0">
-                                <li id="menu-item-7314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7314">
-                                    <a href="#">Terms Of Use</a>
-                                </li>
+                             
                                 <li id="menu-item-7316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7316">
-                                    <a href="privacy-policy.html">Privacy-Policy</a>
+                                    <a href="/privacy-policy">Privacy-Policy</a>
                                 </li>
                                 <li id="menu-item-7118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7118">
-                                    <a href="faq.html">FAQ</a>
+                                    <a href="/faq">FAQ</a>
                                 </li>
-                                <li id="menu-item-7118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7118">
-                                    <a href="watch-video.html">Watch List</a>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -47,9 +43,9 @@
                             <h6 class="footer-link-title">Streamit App</h6>
                             <div class="d-flex align-items-center">
                                 <a class="app-image" href="#">
-                                    <img src="images/footer/01.jpg" alt="play-store">
+                                    <img src="{{asset('images/footer/01.jpg')}}" alt="play-store">
                                 </a><br>
-                                <a class="ml-3 app-image" href="#"><img src="images/footer/02.jpg" alt="app-store"></a>
+                                <a class="ml-3 app-image" href="#"><img src="{{asset('images/footer/02.jpg')}}" alt="app-store"></a>
                             </div>
                         </div>
                     </div>

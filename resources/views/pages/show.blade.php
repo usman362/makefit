@@ -8,7 +8,7 @@
         <div>
             <a href="/show-single/{{$show->id}}">
                 <div class="shows-img">
-                    <img src="images/Banner/{{$show->show_banner}}" class="w-100" alt="">
+                    <img src="{{asset('images/Banner/'.$show->show_banner)}}" class="w-100" alt="">
                     <div class="shows-content">
                         <h4 class="text-white mb-1">{{$show->show_title}}</h4>
                         <div class="movie-time d-flex align-items-center">
@@ -43,7 +43,7 @@
                             <li class="slide-item">
                                 <div class="block-images position-relative">
                                     <div class="img-box">
-                                        <img src="/images/Show/{{$show->show_image}}" class="img-fluid" alt="">
+                                        <img src="{{asset('images/Show/'.$show->show_image)}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="block-description">
                                         <h6 class="iq-title"><a href="/show-single/{{$show->id}}">{{$show->show_title}}</a></h6>

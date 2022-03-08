@@ -26,7 +26,10 @@ Route::get('/movie-single/{id}','HomeController@videopage');
 Route::get('/show-single/{id}','HomeController@showvideo');
 Route::get('/episodevideo/{id}','HomeController@episodevideo');
 Route::get('/movie-category', 'HomeController@movies');
-
+Route::get('/setting', 'HomeController@setting');
+Route::get('/setting-edit','HomeController@setting_edit');
+Route::post('/setting-update','HomeController@setting_update');
+Route::get('/search-result','HomeController@search_result');
 
 
 Route::get('/show-category', 'HomeController@shows' );
@@ -54,9 +57,7 @@ Route::get('/pricing-plan', function () {
 
 /////// backend ///////
 
-Route::get('/index', function () {
-    return view('backend.pages.index');
-});
+Route::get('/index', 'DashboardController@index');
 
 Route::resource('/rating','RateController');
 

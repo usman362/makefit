@@ -3,7 +3,7 @@
 
 <div class="video-container iq-main-slider">
     <video class="video d-block" controls="" loop="">
-        <source src="/videos/Episode/{{$episode->video}}" type="video/mp4">
+        <source src="{{asset('videos/Episode/'.$episode->video)}}" type="video/mp4">
     </video>
 </div>
 
@@ -55,7 +55,7 @@
                     <div class="col-1-5 col-md-6 iq-mb-30">
                         <div class="epi-box">
                             <div class="epi-img position-relative">
-                                <img src="/images/Episode/{{$episode->ep_image}}" class="img-fluid img-zoom" alt="">
+                                <img src="{{asset('images/Episode/'.$episode->ep_image)}}" class="img-fluid img-zoom" alt="">
                                 <div class="episode-play-info">
                                     <div class="episode-play">
                                         <a href="">

@@ -13,12 +13,7 @@
                     <div class="iq-card-body">
                         <div class="table-responsive">
                             <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
-                                <div class="row">
-
-                                    <div class="col-sm-12 col-md-6">
-                                        <div id="DataTables_Table_0_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="DataTables_Table_0"></label></div>
-                                    </div>
-                                </div>
+                                
                                 <div class="row">
                                     <div class="col-sm-12">
                                         <table class="data-tables table movie_table dataTable no-footer" style="width: 100%;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">

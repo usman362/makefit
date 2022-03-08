@@ -3,7 +3,7 @@
 
 <div class="video-container iq-main-slider" >
     <video class="video d-block" controls="" loop="" onclick="document.getElementById('post-view{{$movie->id}}').submit()">
-        <source src="/videos/Movies/{{$movie->video}}" type="video/mp4">
+        <source src="{{asset('videos/Movies/'.$movie->video)}}" type="video/mp4">
     </video>
 </div>
 
@@ -13,10 +13,7 @@
             <div class="col-lg-12">
                 <div class="trending-info season-info g-border">
                     <h4 class="trending-text big-title text-uppercase mt-0">{{$movie->title}}</h4>
-                    <div class="d-flex align-items-center text-white text-detail episode-name mb-0">
-                        <span>S1E01</span>
-                        <span class="trending-year">Lorem Ipsum is dummy text</span>
-                    </div>
+                    
                     <p class="trending-dec w-100 mb-0">{{$movie->description}}</p>
                     <ul class="list-inline p-0 mt-4 share-icons music-play-lists">
                         <li><span><i class="ri-add-line"></i></span></li>
@@ -42,19 +39,21 @@
                 <div class="row">
                     <div class="col-sm-12 overflow-hidden">
                         <div class="iq-main-header d-flex align-items-center justify-content-between">
-                            <h4 class="main-title">Latest Episodes</h4>
-                            <a href="#" class="text-primary">View all</a>
+                            <h4 class="main-title">Latest Movies</h4>
+                            <a href="/movie-category" class="text-primary">View all</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
+                    @foreach ($latestmovies as $latestmovie)
+                        
                     <div class="col-1-5 col-md-6 iq-mb-30">
                         <div class="epi-box">
                             <div class="epi-img position-relative">
-                                <img src="images/episodes/01.jpg" class="img-fluid img-zoom" alt="">
+                                <img src="{{asset('images/movies/'.$latestmovie->image)}}" class="img-fluid img-zoom" alt="">
                                 <div class="episode-play-info">
                                     <div class="episode-play">
-                                        <a href="#">
+                                        <a href="/movie-single/{{$latestmovie->id}}">
                                             <i class="ri-play-fill"></i>
                                         </a>
                                     </div>
@@ -62,16 +61,18 @@
                             </div>
                             <div class="epi-desc p-3">
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <span class="text-white">11 Aug 20</span>
-                                    <span class="text-primary">30m</span>
+                                    <span class="text-white">{{$latestmovie->created_at->format('Y-m-d')}}</span>
+                                    <span class="text-primary">{{$latestmovie->duration}}</span>
                                 </div>
-                                <a href="#">
-                                    <h6 class="epi-name text-white mb-0">Lorem Ipsum is simply dummy text
+                                <a href="/movie-single/{{$latestmovie->id}}">
+                                    <h6 class="epi-name text-white mb-0">{{$latestmovie->title}}
                                     </h6>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    
+                    @endforeach
                 </div>
             </div>
         </div>

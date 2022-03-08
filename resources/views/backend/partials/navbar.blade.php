@@ -168,7 +168,12 @@
                 </li>
                 <li class="line-height pt-3">
                    <a href="#" class="search-toggle iq-waves-effect d-flex align-items-center">
-                      <img src="../assets/images/user/1.jpg" class="img-fluid rounded-circle mr-3" alt="user">
+                      
+                      @if (Auth::User()->profile_img != null)
+                      <img src="{{asset('images/User_profile/'.Auth::user()->profile_img)}}" class="img-fluid rounded-circle mr-3" alt="user">
+                      @else
+                      <img src="{{asset('assets/images/user/1.jpg')}}" class="img-fluid rounded-circle mr-3" alt="user">    
+                      @endif
                    </a>
                    <div class="iq-sub-dropdown iq-user-dropdown">
                       <div class="iq-card shadow-none m-0">

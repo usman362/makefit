@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Movie;
 use App\PostView;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use App\Show;
 use App\Episode;
 use App\EpisodeView;
@@ -38,7 +39,7 @@ class HomeController extends Controller
     public function videopage($id)
     {
         $movie = Movie::find($id);
-
+        $latestmovies = Movie::orderBy('total_views','desc')->where('id','!=',$id)->paginate(5); 
         $countdata = PostView::where('id_post',$movie->id)->where('user_id',Auth::user()->id)->first();
         $count = PostView::where('id_post',$movie->id)->get()->groupBy('user_id');
         if($countdata)
@@ -49,7 +50,7 @@ class HomeController extends Controller
         $movie->save();
 
         // return back();
-        return view('pages.videopage',compact('movie'));
+        return view('pages.videopage',compact('movie','latestmovies'));
    
     }
      
@@ -120,4 +121,32 @@ class HomeController extends Controller
         return view('pages.show',compact('shows'));
     }
     
+    public function setting(){
+
+        return view('pages.setting');
+    }
+    public function setting_edit(){
+        
+        return view('pages.setting_edit');
+    }
+
+    public function setting_update(Request $request){
+        $profile = Auth::User();
+        $profile->name = $request->name;
+        $profile->email = $request->email;
+        if ($request->has('password')) {
+            $profile->password = Hash::make($request->password);
+        }
+        $profile->dob = $request->dob;
+        $profile->lang = $request->lang;
+        $profile->save();
+        return redirect('/setting');
+    }
+
+    public function search_result(Request $request){
+        $movies = Movie::where('title','LIKE','%'.$request->search.'%')->orWhere('description','LIKE','%'.$request->search.'%')->get();
+        $shows = Show::where('show_title','LIKE','%'.$request->search.'%')->orWhere('show_description','LIKE','%'.$request->search.'%')->get();
+        
+        return view('pages.search_result',compact('movies','shows'));
+    }
 }

@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-<div class="iq-breadcrumb-one  iq-bg-over iq-over-dark-50" style="background-image: url(images/about-us/01.jpg);">
+<div class="iq-breadcrumb-one  iq-bg-over iq-over-dark-50" style="background-image: url({{asset('images/about-us/01.jpg')}});">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-sm-12">
@@ -34,7 +34,7 @@
         <div class="row about-us-detail">
             <div class="col-md-3 mb-4">
                 <div class="image-box">
-                    <img src="images/about-us/02.jpg" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
+                    <img src="{{asset('images/about-us/02.jpg')}}" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
                 </div>
 
                 <div class="icon-box-content">
@@ -49,7 +49,7 @@
 
             <div class="col-md-3 mb-4">
                 <div class="image-box">
-                    <img src="images/about-us/03.jpg" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
+                    <img src="{{asset('images/about-us/03.jpg')}}" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
                 </div>
 
                 <div class="icon-box-content">
@@ -64,7 +64,7 @@
 
             <div class="col-md-3 mb-4">
                 <div class="image-box">
-                    <img src="images/about-us/04.jpg" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
+                    <img src="{{asset('images/about-us/04.jpg')}}" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
                 </div>
 
                 <div class="icon-box-content">
@@ -79,7 +79,7 @@
 
             <div class="col-md-3 mb-4">
                 <div class="image-box">
-                    <img src="images/about-us/05.jpg" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
+                    <img src="{{asset('images/about-us/05.jpg')}}" class="img-fluid attachment-large size-large" alt="" loading="lazy" width="265" height="345">
                 </div>
 
                 <div class="icon-box-content">
@@ -103,7 +103,7 @@
                 <div class="row about-us-row text-center align-items-center">
                     <div class="col-md-6">
                         <div class="text-center">
-                            <img src="images/about-us/06.jpg" class=" img-fluid attachment-large size-large" alt="" loading="lazy" sizes="100vw" width="497" height="477">
+                            <img src="{{asset('images/about-us/06.jpg')}}" class=" img-fluid attachment-large size-large" alt="" loading="lazy" sizes="100vw" width="497" height="477">
                         </div>
                     </div>
                     <div class="col-md-6">

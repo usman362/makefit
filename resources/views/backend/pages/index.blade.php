@@ -19,8 +19,8 @@
                             </div>
                          </div>
                          <div class="d-flex align-items-center justify-content-between mt-3">
-                            <h4 class=" mb-0">+24K</h4>
-                            <p class="mb-0 text-primary"><span><i class="fa fa-caret-down mr-2"></i></span>35%</p>
+                            <h4 class=" mb-0">+{{$total_views}}</h4>
+                        
                          </div>
                       </div>
                    </div>
@@ -40,7 +40,7 @@
                          </div>
                          <div class="d-flex align-items-center justify-content-between mt-3">
                             <h4 class=" mb-0">+55K</h4>
-                            <p class="mb-0 text-warning"><span><i class="fa fa-caret-up mr-2"></i></span>50%</p>
+                          
                          </div>
                       </div>
                    </div>
@@ -60,7 +60,7 @@
                          </div>
                          <div class="d-flex align-items-center justify-content-between mt-3">
                             <h4 class=" mb-0">+1M</h4>
-                            <p class="mb-0 text-info"><span><i class="fa fa-caret-up mr-2"></i></span>80%</p>
+                          
                          </div>
                       </div>
                    </div>
@@ -80,7 +80,7 @@
                          </div>
                          <div class="d-flex align-items-center justify-content-between mt-3">
                             <h4 class=" mb-0">+2M</h4>
-                            <p class="mb-0 text-success"><span><i class="fa fa-caret-up mr-2"></i></span>80%</p>
+                            
                          </div>
                       </div>
                    </div>
@@ -304,96 +304,85 @@
                    <div class="iq-header-title">
                       <h4 class="card-title">Top Category</h4>
                    </div>
-                   <div class="iq-card-header-toolbar d-flex align-items-center seasons">
-                      <div class="iq-custom-select d-inline-block sea-epi s-margin">
-                         <select name="cars" class="form-control season-select">
-                            <option value="season1">Today</option>
-                            <option value="season2">This Week</option>
-                            <option value="season2">This Month</option>
-                         </select>
-                      </div>
-                   </div>
                 </div>
                 <div class="iq-card-body row align-items-center">
-                   <div class="col-lg-7">
+                   <div class="col-lg-12">
                       <div class="row list-unstyled mb-0 pb-0">
                          <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-primary">
-                               <span class="bg-primary" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 40%;"></span>
+                               <span class="bg-primary" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-primary"><i class="las la-film font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <h6 class="mb-0 font-size-14 line-height">Actions</h6>
-                                  <small class="text-primary mb-0">+34%</small>
+                                  
                                </div>
                             </div>
                          </div>
                          <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-secondary">
-                               <span class="bg-secondary" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 70%;"></span>
+                               <span class="bg-secondary" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-secondary"><i class="las la-laugh-squint font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <p class="mb-0 font-size-14 line-height">Comedy</p>
-                                  <small class="text-secondary mb-0">+44%</small>
+                                  
                                </div>
                             </div>
                          </div>
                          <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-info">
-                               <span class="bg-info" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 40%;"></span>
+                               <span class="bg-info" data-percent="100" style="transition: height 2s ease 0s; width: 100%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-info"><i class="las la-skull-crossbones font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <p class="mb-0 font-size-14 line-height">Horror</p>
-                                  <small class="text-info mb-0">+56%</small>
+                                  
                                </div>
                             </div>
                          </div>
                          <div class="col-sm-6 col-md-4 col-lg-6 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-warning">
-                               <span class="bg-warning" data-percent="100" style="transition: height 2s ease 0s; width: 40%; height: 40%;"></span>
+                               <span class="bg-warning" data-percent="100" style="transition: height 2s ease 0s; width: 40%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-warning"><i class="las la-theater-masks font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <p class="mb-0 font-size-14 line-height">Drama</p>
-                                  <small class="text-warning mb-0">+65%</small>
+                                  
                                </div>
                             </div>
                          </div>
                          <div class="col-sm-6 col-md-4 col-lg-6 mb-lg-0 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-success">
-                               <span class="bg-success" data-percent="100" style="transition: height 2s ease 0s; width: 60%; height: 60%;"></span>
+                               <span class="bg-success" data-percent="100" style="transition: height 2s ease 0s; width: 60%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center mb-lg-0 mb-3">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-success"><i class="las la-child font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <p class="mb-0 font-size-14 line-height">Kids</p>
-                                  <small class="text-success mb-0">+74%</small>
+                                  
                                </div>
                             </div>
                          </div>
                          <div class="col-sm-6 col-md-4 col-lg-6  mb-lg-0 mb-3">
                             <div class="iq-progress-bar progress-bar-vertical iq-bg-danger">
-                               <span class="bg-danger" data-percent="100" style="transition: height 2s ease 0s; width: 80%; height: 80%;"></span>
+                               <span class="bg-danger" data-percent="100" style="transition: height 2s ease 0s; width: 80%; height: 100%;"></span>
                             </div>
                             <div class="media align-items-center">
                                <div class="iq-icon-box-view rounded mr-3 iq-bg-danger"><i class="las la-grin-beam font-size-32"></i></div>
                                <div class="media-body text-white">
                                   <p class="mb-0 font-size-14 line-height">Thrilled</p>
-                                  <small class="text-danger mb-0">+40%</small>
+                                  
                                </div>
                             </div>
                          </div>
                       </div>
                    </div>
-                   <div class="col-lg-5">
-                      <div id="view-chart-02" class="view-cahrt-02"></div>
-                   </div>
+                   
                 </div>
              </div>
           </div>
@@ -403,14 +392,7 @@
                    <div class="iq-header-title">
                       <h4 class="card-title">Recently Viewd Items</h4>
                    </div>
-                   <div class="iq-card-header-toolbar d-flex align-items-center seasons">
-                      <div class="iq-custom-select d-inline-block sea-epi s-margin">
-                         <select name="cars" class="form-control season-select">
-                            <option value="season1">Most Likely</option>
-                            <option value="season2">Unlikely</option>
-                         </select>
-                      </div>
-                   </div>
+                 
                 </div>
                 <div class="iq-card-body">
                    <div class="table-responsive">
@@ -421,113 +403,36 @@
                                <th style="width:10%;">Rating</th>
                                <th style="width:20%;">Category</th>
                                <th style="width:10%;">Download/Views</th>
-                               <th style="width:10%;">User</th>
+                               
                                <th style="width:20%;">Date</th>
-                               <th style="width:10%;"><i class="lar la-heart"></i></th>
                             </tr>
                          </thead>
                          <tbody>
-                            <tr>
+                            
+                           @foreach ($movies as $movie)
+                           <tr>
                                <td>
                                   <div class="media align-items-center">
                                      <div class="iq-movie">
-                                        <a href="javascript:void(0);"><img src="../assets/images/movie-thumb/01.jpg" class="img-border-radius avatar-40 img-fluid" alt=""></a>
+                                        <a href="javascript:void(0);"><img src="{{asset('images/movies/'.$movie->image)}}" class="img-border-radius avatar-40 img-fluid" alt=""></a>
                                      </div>
                                      <div class="media-body text-white text-left ml-3">
-                                        <p class="mb-0">Champions</p>
-                                        <small>1h 40m</small>
+                                        <p class="mb-0">{{$movie->title}}</p>
+                                        <small>{{$movie->duration}}</small>
                                      </div>
                                   </div>
                                </td>
                                <td><i class="lar la-star mr-2"></i> 9.2</td>
-                               <td>Horror</td>
+                               <td>{{$category = App\Category::find($movie->category)->c_name}}</td>
                                <td>
                                   <i class="lar la-eye "></i>
                                </td>
-                               <td>Unsubcriber</td>
-                               <td>21 July,2020</td>
-                               <td><i class="las la-heart text-primary"></i></td>
+                               
+                               <td>{{$movie->created_at->format('Y-m-d')}}</td>
                             </tr>
-                            <tr>
-                               <td >
-                                  <div class="media align-items-center">
-                                     <div class="iq-movie">
-                                        <a href="javascript:void(0);"><img src="../assets/images/show-thumb/05.jpg" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                                     </div>
-                                     <div class="media-body text-white text-left ml-3">
-                                        <p class="mb-0">Last Race</p>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td><i class="lar la-star mr-2"></i> 7.2</td>
-                               <td>Horror</td>
-                               <td>
-                                  <i class="lar la-eye "></i>
-                               </td>
-                               <td>subcriber</td>
-                               <td>22 July,2020</td>
-                               <td><i class="las la-heart text-primary"></i></td>
-                            </tr>
-                            <tr>
-                               <td>
-                                  <div class="media align-items-center">
-                                     <div class="iq-movie">
-                                        <a href="javascript:void(0);"><img src="../assets/images/show-thumb/07.jpg" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                                     </div>
-                                     <div class="media-body text-white text-left ml-3">
-                                        <p class="mb-0">Boop Bitty</p>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td><i class="lar la-star mr-2"></i> 8.2</td>
-                               <td>Thriller</td>
-                               <td>
-                                  <i class="lar la-eye "></i>
-                               </td>
-                               <td>Unsubcriber</td>
-                               <td>23 July,2020</td>
-                               <td><i class="las la-heart text-primary"></i></td>
-                            </tr>
-                            <tr>
-                               <td>
-                                  <div class="media align-items-center">
-                                     <div class="iq-movie">
-                                        <a href="javascript:void(0);"><img src="../assets/images/show-thumb/10.jpg" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                                     </div>
-                                     <div class="media-body text-white text-left ml-3">
-                                        <p class="mb-0">Dino Land</p>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td><i class="lar la-star mr-2"></i> 8.5</td>
-                               <td>Action</td>
-                               <td>
-                                  <i class="lar la-eye "></i>
-                               </td>
-                               <td>Unsubcriber</td>
-                               <td>24 July,2020</td>
-                               <td><i class="las la-heart text-primary"></i></td>
-                            </tr>
-                            <tr>
-                               <td>
-                                  <div class="media align-items-center">
-                                     <div class="iq-movie">
-                                        <a href="javascript:void(0);"><img src="../assets/images/show-thumb/04.jpg" class="img-border-radius avatar-40 img-fluid" alt=""></a>
-                                     </div>
-                                     <div class="media-body text-white text-left ml-3">
-                                        <p class="mb-0">The Last Breath</p>
-                                     </div>
-                                  </div>
-                               </td>
-                               <td><i class="lar la-star mr-2"></i> 8.9</td>
-                               <td>Horror</td>
-                               <td>
-                                  <i class="lar la-eye "></i>
-                               </td>
-                               <td>subcriber</td>
-                               <td>25 July,2020</td>
-                               <td><i class="las la-heart text-primary"></i></td>
-                            </tr>
+                               
+                            @endforeach
+                           
                          </tbody>
                       </table>
                    </div>

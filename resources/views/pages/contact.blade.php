@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<div class="iq-breadcrumb-one  iq-bg-over iq-over-dark-50" style="background-image: url(images/about-us/01.jpg);">
+<div class="iq-breadcrumb-one  iq-bg-over iq-over-dark-50" style="background-image: url({{asset('images/about-us/01.jpg')}});">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col-sm-12">

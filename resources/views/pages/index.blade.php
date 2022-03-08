@@ -6,14 +6,14 @@
             @foreach (App\MovieBanner::all() as $banner)
                 @foreach (App\Movie::where('id',$banner->movie_id)->get() as $movie)
                
-            <div class="slide slick-bg s-bg-1" style="background-image: url('/images/Movies/{{$movie->image}}') !important;">
+            <div class="slide slick-bg s-bg-1" style="background-image: url({{asset('images/Movies/'.$movie->image)}}) !important;">
                 <div class="container-fluid position-relative h-100">
                     <div class="slider-inner h-100">
                         <div class="row align-items-center  h-100">
                             <div class="col-xl-6 col-lg-12 col-md-12">
                                 <a href="javascript:void(0);">
                                     <div class="channel-logo" data-animation-in="fadeInLeft" data-delay-in="0.5">
-                                        <img src="images/MAKEFITTVcopie2.png" class="c-logo" alt="streamit">
+                                        <img src="{{asset('images/MAKEFITTVcopie2.png')}}" class="c-logo" alt="streamit">
                                     </div>
                                 </a>
                                 <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft" data-delay-in="0.6">{{$movie->title}}</h1>
@@ -122,7 +122,7 @@
 
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="/images/movies/{{$latestMovie->image}}" class="img-fluid" alt="">
+                                            <img src="{{asset('images/movies/'.$latestMovie->image)}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
                                             <h6 class="iq-title"><a href="/movie-single/{{$latestMovie->id}}">{{$latestMovie->title}}</a></h6>
@@ -184,7 +184,7 @@
                                     
                                 <li class="slick-bg">
                                     <a href="/movie-single/{{$topMovie->id}}">
-                                        <img src="/images/movies/{{$topMovie->image}}" class="img-fluid w-100" alt="">
+                                        <img src="{{asset('images/movies/'.$topMovie->image)}}" class="img-fluid w-100" alt="">
                                     </a>
                                 </li>
                                 
@@ -196,7 +196,7 @@
                                     <li>
                                         <div class="block-images position-relative">
                                             <a href="/movie-single/{{$topMovie->id}}">
-                                                <img src="/images/movies/{{$topMovie->image}}" class="img-fluid w-100" alt="">
+                                                <img src="{{asset('images/movies/'.$topMovie->image)}}" class="img-fluid w-100" alt="">
                                             </a>
                                             <div class="block-description">
                                                 <h5>{{$topMovie->title}}</h5>
@@ -228,7 +228,7 @@
         </section>
         @foreach (App\Show::where('show_category','1')->paginate(1) as $show)
            
-        <section id="parallex" class="parallax-window" style="background-image: url('/images/Show/{{$show->show_image}}')">
+        <section id="parallex" class="parallax-window" style="background-image: url({{asset('images/Show/'.$show->show_image)}})">
             <div class="container-fluid h-100">
                 <div class="row align-items-center justify-content-center h-100 parallaxt-details">
                     <div class="col-lg-4 r-mb-23">
@@ -266,7 +266,7 @@
                         <div class="parallax-img">
                             @foreach(App\Episode::where('show_id',$show->id)->paginate(1) as $ep)
                             <a href="/episodevideo/{{$ep->id}}">
-                                <img src="images/Show/{{$show->show_image}}" class="img-fluid w-100" alt="bailey">
+                                <img src="{{asset('images/Show/'.$show->show_image)}}" class="img-fluid w-100" alt="bailey">
                             </a>
                             @endforeach
                         </div>
@@ -290,7 +290,7 @@
                                 <li>
                                     <a href="javascript:void(0);">
                                         <div class="movie-slick position-relative">
-                                            <img src="images/Show/{{$show->show_image}}" class="img-fluid" alt="">
+                                            <img src="{{asset('images/Show/'.$show->show_image)}}" class="img-fluid" alt="">
                                         </div>
                                     </a>
                                 </li>
@@ -300,7 +300,7 @@
                             <ul id="trending-slider" class="list-inline p-0 m-0  d-flex align-items-center">
                                 @foreach ($shows as $show)
                                 <li>
-                                    <div class="tranding-block position-relative" style="background-image: url(images/Show/{{$show->show_image}});">
+                                    <div class="tranding-block position-relative" style="background-image: url({{asset('images/Show/'.$show->show_image)}});">
                                         <div class="trending-custom-tab">
                                            
                                             <div class="trending-content">
@@ -309,7 +309,7 @@
                                                         <a href="javascript:void(0);" tabindex="0">
                                                             <div class="res-logo">
                                                                 <div class="channel-logo">
-                                                                    <img src="images/MAKEFITTVcopie2.png" class="c-logo" alt="streamit">
+                                                                    <img src="{{asset('images/MAKEFITTVcopie2.png')}}" class="c-logo" alt="streamit">
                                                                 </div>
                                                             </div>
                                                         </a>
@@ -353,7 +353,7 @@
                     <div class="col-sm-12 overflow-hidden">
                         <div class="iq-main-header d-flex align-items-center justify-content-between">
                             <h4 class="main-title">Recommended For You</h4>
-                            <a class="iq-view-all" href="movie-category.html">View All</a>
+                            <a class="iq-view-all" href="#">View All</a>
                         </div>
                         <div class="tvthrillers-contens">
                             <ul class="favorites-slider list-inline row p-0 mb-0">
@@ -361,7 +361,7 @@
 
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="images/tvthrillers/01.jpg" class="img-fluid" alt="">
+                                            <img src="{{asset('images/tvthrillers/01.jpg')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
                                             <h6 class="iq-title"><a href="show-details.html">Day of Darkness</a></h6>
@@ -398,7 +398,7 @@
 
                                     <div class="block-images position-relative">
                                         <div class="img-box">
-                                            <img src="images/tvthrillers/02.jpg" class="img-fluid" alt="">
+                                            <img src="{{asset('images/tvthrillers/02.jpg')}}" class="img-fluid" alt="">
                                         </div>
                                         <div class="block-description">
                                             <h6 class="iq-title"><a href="show-details.html">My True Friends</a></h6>
@@ -431,117 +431,7 @@
                                     </div>
 
                                 </li>
-                                <li class="slide-item">
-
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="images/tvthrillers/03.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6 class="iq-title"><a href="show-details.html">Arrival 1999</a></h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">11+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <span class="btn btn-hover iq-button"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li class="share">
-                                                    <span><i class="ri-share-fill"></i></span>
-                                                    <div class="share-box">
-                                                        <div class="d-flex align-items-center">
-                                                            <a href="https://www.facebook.com/sharer?u=https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-facebook-fill"></i></a>
-                                                            <a href="https://twitter.com/intent/tweet?text=Currentlyreading" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-twitter-fill"></i></a>
-                                                            <a href="#" data-link="https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" class="share-ico iq-copy-link" tabindex="0"><i class="ri-links-fill"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li><span><i class="ri-heart-fill"></i></span>
-                                                    <span class="count-box">19+</span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <li class="slide-item">
-
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="images/tvthrillers/04.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6 class="iq-title"><a href="show-details.html">Night Mare</a></h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">18+</div>
-                                                <span class="text-white">3 Seasons</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <span class="btn btn-hover iq-button"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li class="share">
-                                                    <span><i class="ri-share-fill"></i></span>
-                                                    <div class="share-box">
-                                                        <div class="d-flex align-items-center">
-                                                            <a href="https://www.facebook.com/sharer?u=https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-facebook-fill"></i></a>
-                                                            <a href="https://twitter.com/intent/tweet?text=Currentlyreading" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-twitter-fill"></i></a>
-                                                            <a href="#" data-link="https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" class="share-ico iq-copy-link" tabindex="0"><i class="ri-links-fill"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li><span><i class="ri-heart-fill"></i></span>
-                                                    <span class="count-box">19+</span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </li>
-                                <li class="slide-item">
-
-                                    <div class="block-images position-relative">
-                                        <div class="img-box">
-                                            <img src="images/tvthrillers/05.jpg" class="img-fluid" alt="">
-                                        </div>
-                                        <div class="block-description">
-                                            <h6 class="iq-title"><a href="show-details.html">The Marshal King</a></h6>
-                                            <div class="movie-time d-flex align-items-center my-2">
-                                                <div class="badge badge-secondary p-1 mr-2">17+</div>
-                                                <span class="text-white">1 Season</span>
-                                            </div>
-                                            <div class="hover-buttons">
-                                                <span class="btn btn-hover iq-button"><i class="fa fa-play mr-1" aria-hidden="true"></i>
-                                          Play Now</span>
-                                            </div>
-                                        </div>
-                                        <div class="block-social-info">
-                                            <ul class="list-inline p-0 m-0 music-play-lists">
-                                                <li class="share">
-                                                    <span><i class="ri-share-fill"></i></span>
-                                                    <div class="share-box">
-                                                        <div class="d-flex align-items-center">
-                                                            <a href="https://www.facebook.com/sharer?u=https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-facebook-fill"></i></a>
-                                                            <a href="https://twitter.com/intent/tweet?text=Currentlyreading" target="_blank" rel="noopener noreferrer" class="share-ico" tabindex="0"><i class="ri-twitter-fill"></i></a>
-                                                            <a href="#" data-link="https://iqonic.design/wp-themes/streamit_wp/movie/shadow/" class="share-ico iq-copy-link" tabindex="0"><i class="ri-links-fill"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li><span><i class="ri-heart-fill"></i></span>
-                                                    <span class="count-box">19+</span></li>
-                                                <li><span><i class="ri-add-line"></i></span></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </li>
+                            
                             </ul>
                         </div>
                     </div>

@@ -27,7 +27,7 @@
                                         <input type="text" class="form-control mb-0" name="name" id="exampleInputl2" placeholder="Enter Your Name" value="{{$profile->name}}" autocomplete="off" required="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Date of Birth</label>
+                                        <label>Dates of Birth</label>
                                         <input type="text" class="form-control date-input basicFlatpickr mb-0 flatpickr-input" name="dob" placeholder="Select Date" value="{{$profile->dob}}" required="" readonly="readonly">
                                     </div>
                                     <div class="form-group d-flex flex-md-row flex-column">
